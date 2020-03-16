@@ -5,6 +5,8 @@ var squares = document.getElementsByClassName("square");
 var pckcolor = pickcolor();
 var msg = document.querySelector("#message");
 var res = document.getElementById("res");
+var h1 = document.querySelector("h1");
+
 res.textContent = pckcolor;
 //console.log(squares.length);
 //console.log("hey");
@@ -20,6 +22,7 @@ for (var i = 0; i < squares.length; i++) {
       //console.log("DSSSSSSSSSSSSSSSSS");
       msg.textContent = "Correct";
       changeColor(clickedColor);
+      h1.style.backgroundColor = clickedColor;
     } else {
       this.style.backgroundColor = "#232323";
     }
