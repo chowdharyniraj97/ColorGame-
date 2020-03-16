@@ -14,12 +14,21 @@ for (var i = 0; i < squares.length; i++) {
   squares[i].style.backgroundColor = colors[i];
   squares[i].addEventListener("click", function() {
     var clickedColor = this.style.backgroundColor;
-    console.log(clickedColor);
+    //console.log(clickedColor);
     var ans = document.getElementById("res");
-    console.log(ans.innerText);
-    if (clickedColor === ans.textContent) this.style.backgroundColor = "green";
-    else {
+    //console.log(ans.innerText);
+    if (clickedColor === ans.textContent) {
+      var msg = document.querySelector("#message");
+      msg.textContent = "Correct";
+      changeColor(clickedColor);
+    } else {
       this.style.backgroundColor = "#232323";
     }
   });
+}
+
+function changeColor(color) {
+  for (var i = 0; i < squares.length; i++) {
+    squares[i].style.backgroundColor = color;
+  }
 }
