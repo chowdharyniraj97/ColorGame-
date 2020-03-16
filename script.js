@@ -6,20 +6,14 @@ var pckcolor = pickcolor();
 var msg = document.querySelector("#message");
 var res = document.getElementById("res");
 var h1 = document.querySelector("h1");
-
+var btn = document.getElementById("reset");
 res.textContent = pckcolor;
-//console.log(squares.length);
-//console.log("hey");
 for (var i = 0; i < squares.length; i++) {
   squares[i].style.backgroundColor = colors[i];
   squares[i].addEventListener("click", function() {
     var clickedColor = this.style.backgroundColor;
-    console.log(clickedColor);
-    //console.log(ans.innerText);
-    console.log(clickedColor + " " + pckcolor);
 
     if (clickedColor === pckcolor) {
-      //console.log("DSSSSSSSSSSSSSSSSS");
       msg.textContent = "Correct";
       changeColor(clickedColor);
       h1.style.backgroundColor = clickedColor;
@@ -55,3 +49,12 @@ function getthecolor() {
   var b = Math.floor(Math.random() * 256);
   return "rgb(" + r + ", " + g + ", " + b + ")";
 }
+
+btn.addEventListener("click", function() {
+  colors = generate(6);
+  pckcolor = pickcolor();
+  res.textContent = pckcolor;
+  for (var i = 0; i < squares.length; i++) {
+    squares[i].style.backgroundColor = colors[i];
+  }
+});
