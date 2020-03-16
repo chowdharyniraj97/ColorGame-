@@ -18,6 +18,8 @@ for (var i = 0; i < squares.length; i++) {
       changeColor(clickedColor);
       h1.style.backgroundColor = clickedColor;
     } else {
+      msg.textContent = "Try Again!";
+
       this.style.backgroundColor = "#232323";
     }
   });
@@ -51,6 +53,7 @@ function getthecolor() {
 }
 
 btn.addEventListener("click", function() {
+  msg.textContent = "";
   colors = generate(6);
   pckcolor = pickcolor();
   res.textContent = pckcolor;
