@@ -21,6 +21,7 @@ h1 {
 }
 #message {
   text-align: center;
+  margin-left: 30%;
 }
 
 #stripe {
@@ -35,4 +36,8 @@ h1 {
 
 #container {
   margin-top: 40px;
+}
+
+#reset {
+  margin-top: 4px;
 }
