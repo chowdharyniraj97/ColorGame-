@@ -54,6 +54,7 @@ function getthecolor() {
 
 btn.addEventListener("click", function() {
   msg.textContent = "";
+  h1.style.background = "#232323";
   colors = generate(6);
   pckcolor = pickcolor();
   res.textContent = pckcolor;
