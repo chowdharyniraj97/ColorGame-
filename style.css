@@ -27,3 +27,11 @@ h1 {
   height: 30px;
   text-align: center;
 }
+
+.square {
+  border-radius: 30px;
+}
+
+#container {
+  margin-top: 40px;
+}
